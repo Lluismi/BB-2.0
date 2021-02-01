@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Balearic Build 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css">
+    <!-- Llama a una imagen y la añade como favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Cargo la librería de iconos para mostrar un botón de 3 líneas para el menú móvil -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Referencio a nuestro fichero de JS -->
+    <script src="js/login.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+    <div>
+      <img src="images/image.png" alt="Imagen Juego" class="imagen">
+    </div>
+    <h2>Iniciar Sesión</h2>
+    <form>
+        <div id="container">
+            <label>Username:</label>
+            <input id="username" type="text" placeholder="Escriu es teu username" required /><br>
+            <label>Password:</label>
+            <input id="password" type="password" placeholder="Escriu una contrasenya" required/>
+            <button type="button" onclick="mostrarContrasena()">👀</button><br>
+            <button id="login" onclick="validar()">Login</button>
+        </div>
+    </form>
+    <br />
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Define que acepte los caracteres especiales -->
+        <meta charset="utf-8">
+        <!-- Definimos la vista con escala inicial 1 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Titulo página web -->
+        <title>Balearic Build 2021</title>
+        <!-- Llama al archivo de estilos CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+        <!-- Llama a una imagen y la añade como favicon -->
+        <link rel="shortcut icon" type="image/png" href="images/logo.png">
+        <!-- Llama a la fuente Space Grotesk -->
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Cargo la librería de iconos para mostrar un botón de 3 líneas para el menú móvil -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header></header>
+        <div>
+            <img src="images/image.png" alt="Imagen Juego" class="imagen">
+        </div>
+        <h2>Entrar al Juego</h2>
+        <div class="contenedor">
+            <p>
+                Nickname:
+                <br>
+                <input id="nombreUsuario" type="text">
+            </p>
+            <p>Selecciona un personaje:</p>
+            <div class="contenedorPersonajes">
+            </div>
+            <form action="juego.html">
+                <input id="entrarJuego" type="submit" value="Entrar al Juego"/>
+            </form>
+        </div>
+        <footer></footer>
+        <!-- Referencio a Axios -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Referencio a nuestro fichero de JS -->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

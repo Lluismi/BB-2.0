@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Balearic Build 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/registro.css">
+    <!-- Llama a una imagen y la añade como favicon -->
+    <link rel="shortcut icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Cargo la librería de iconos para mostrar un botón de 3 líneas para el menú móvil -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Referencio a nuestro fichero de JS -->
+    <script src="js/registro.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+    <div>
+      <img src="images/image.png" alt="Imagen Juego" class="imagen">
+    </div>
+    <h2>Crear Cuenta</h2>
+    <form>
+      <div id="container">
+        <label>Nom:</label>
+        <input id="nom" type="text" placeholder="Escriu es teu nom" required/><br />
+        <p id="e_nom"></p>
+        <label>Llinatges:</label>
+        <input id="llinatges" type="text" placeholder="Escriu es teus llinatges" required/><br />
+        <p id="e_llinatges"></p>
+        <label>Correu Electronic:</label>
+        <input id="correu" type="text" placeholder="Escriu es teu correu" required/><br />
+        <p id="e_correu"></p>
+        <label>Confirmar correu:</label>
+        <input id="confirmcorreu" type="text" placeholder="Escriu es teu correu" required/><br />
+        <p id="e_confirmcorreu"></p>
+        <label>Password:</label>
+        <input id="password" type="password" placeholder="Escriu una contrasenya" required/><button type="button" onclick="mostrarPassword()">👀</button><br />
+        <p id="e_password"></p>
+        <label>Confirmar password:</label>
+        <input id="confirmpassword" type="password" placeholder="Escriu una contrasenya" required/><button type="button" onclick="mostrarconfirmpassword()">👀</button><br />
+        <p id="e_confirmpassword"></p>
+        <label>Username:</label>
+        <input id="username" type="text" placeholder="Escriu es teu username" required/><br />
+        <p id="e_username"></p>
+        <label>Telefono:</label>
+        <input id="telefono" type="text" placeholder="699-999999" required/><br />
+        <p id="e_telefono"></p>
+        <label>Pais:</label>
+        <select id="paisos"></select><br />
+        <label>Edad:</label>
+        <input type="radio" name="drone">
+        <label>I’m not 18</label>
+        <input type="radio" name="drone">
+        <label>I’m 18</label><br>
+        <button onclick="validar()">Registrarse</button>
+      </div>
+    </form>
+    <footer></footer>
+  </body>
+</html>

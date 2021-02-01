@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Footer global</title>
+    </head>
+    <body>
+        <footer>
+            <div>
+                Copyright © 2020 Mallorca ESP, Inc. All rights reserved.
+            </div>
+        </footer>
+        
+        <section class="cookies">
+            <h2 class="cookies_titulo">Aviso de Cookies:</h2> 
+            <p class="cookies_texto">Este sitio web almacena datos como cookies para habilitar la 
+                                    funcionalidad necesaria del sitio, incluidos análisis, orientación y personalización. <br> Puede cambiar su
+                                    configuración en cualquier momento o aceptar la configuración predeterminada. <u>Aviso de Privacidad</u> </p>
+            <div class="cookies_botones">
+                <!-- Botón de negación --> 
+                <button class="cookies_boton-no">Rechazar</button>
+                <!-- Botón de afirmación --> 
+                <button class="cookies_boton-si">Aceptar</button>
+            </div>
+        </section>  
+
+        <script>
+            // CÓDIGO PARA AVISO DE COOKIES
+            document.getElementsByClassName("cookies_boton-si")[0].addEventListener("click", acceptCookies, false);
+
+            document.getElementsByClassName("cookies_boton-no")[0].addEventListener("click", refuseCookies, false);
+
+            /**
+             * Método para ocultar la sección del mensaje de Cookies 
+             */ 
+            function hideSection() {
+                document.getElementsByClassName("cookies")[0].style.transition = "1.20s";
+                document.getElementsByClassName("cookies")[0].style.bottom = "-500px";
+                setTimeout(function(){ document.getElementsByClassName("cookies")[0].remove(); }, 1500);
+            }
+
+            /**
+             * Método que llama a ocultar sección y guarda en el localStorage
+             * que la Cookie está aceptada 
+             */
+            function acceptCookies() {
+                hideSection();
+                // Guardar Cookie aceptada
+                localStorage.setItem('cookie', true);
+            }
+
+            /**
+             * Método que llama a ocultar sección y guarda en el localStorage
+             * que la Cookie está rechazada
+             */ 
+            function refuseCookies() {
+                hideSection();
+                // Guardar que se ha rechazado
+                localStorage.setItem('cookie', false);
+            }
+
+            /**
+             * Método que inicia la lógica
+             */
+            function initialize() {
+                // Comprueba si alguna vez el usuario ha marcado una opción
+                if (localStorage.getItem('cookie') !== null) {
+                    if (localStorage.getItem('cookie') === 'true') {
+                        // Aceptó
+                        acceptCookies();
+                    } else {
+                        // Rechazó
+                        refuseCookies();
+                    }
+                }
+            }
+
+            // Activar código
+            initialize();
+
+        </script>
+    </body>
+</html>
