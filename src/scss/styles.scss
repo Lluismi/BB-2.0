@@ -1,0 +1,87 @@
+@import "reset";
+
+.cabezero {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: black;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0px;
+
+    .justify-content-end {
+        background-color: #1f1f1f9e;
+        padding-top: 20px;
+        font-size: 20px;
+    }
+
+    h1 {
+        color: #c28f2c;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .nav-link {
+        color: white;
+    }
+}
+
+.nav-pills {
+    background-color: black;
+    overflow: hidden;
+    
+    .nav-link {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .nav-link:hover {
+        background-color: #c28f2c;
+        color: white;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+.imagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 100px;
+
+    div {
+        padding: 20px;
+    }
+}
+
+.cookies {
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    text-align: center;
+    opacity: 0.9;
+}
