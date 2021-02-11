@@ -2,10 +2,10 @@
     en el icono */
 function myFunction() {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    if (x.className === "nav-pills") {
         x.className += " responsive";
     } else {
-        x.className = "topnav";
+        x.className = "nav-pills";
     }
 }
 
