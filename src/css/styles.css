@@ -27,32 +27,36 @@
 .cabezero .nav-link {
   color: white;
 }
+.cabezero li:first-child {
+  margin-right: auto;
+}
 
-.nav-pills {
+.navbar-nav {
   background-color: black;
   overflow: hidden;
 }
-.nav-pills .nav-link {
+.navbar-nav .nav-link {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
-.nav-pills .nav-link:hover {
+.navbar-nav .nav-link:hover {
   background-color: #c28f2c;
   color: white;
 }
-.nav-pills .icon {
+.navbar-nav .icon {
   display: none;
 }
 
-.imagen {
+.carousel {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   width: 50%;
 }
 
@@ -146,7 +150,7 @@ footer div {
     position: absolute;
     transform: rotateX(0deg);
     z-index: 2;
-    background-color: #ffffff;
+    background-color: white;
     color: black;
     font: 1em/1.8em Arial;
     align-items: center;
@@ -155,7 +159,7 @@ footer div {
 
   .back {
     transform: rotateX(180deg);
-    background: repeating-linear-gradient(-45deg, #ececec, #ececec 10px, #dedede 10px, #dedede 20px);
+    background: repeating-linear-gradient(-45deg, white, white 10px, white 10px, white 20px);
   }
 }
 @media (min-width: 1281px) {
