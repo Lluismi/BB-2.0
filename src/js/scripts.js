@@ -27,7 +27,7 @@ const BASE_URL =
 
 const getAll = async () => {
   try {
-    const res = await axios.get(`${BASE_URL}/personatges`);
+    const res = await axios.get(`${BASE_URL}/characters`);
 
     const all = res.data;
 
@@ -67,15 +67,16 @@ function drawCharacters(characters) {
  */
 function drawCharactersDiv(character, contador) {
     let divPersonaje = document.createElement("div");
-    divPersonaje.id = "personaje" + (contador + 1);
+    divPersonaje.className = "col mb-4" + (contador + 1);
 
     let divFrontPersonaje = document.createElement("div");
     divFrontPersonaje.className = "front";
 
     let divBackPersonaje = document.createElement("div");
-    divBackPersonaje.className = "back";
+    divBackPersonaje.className = "card-body";
 
-    let mottoPersonaje = document.createElement("p");
+    let mottoPersonaje = document.createElement("div");
+    mottoPersonaje.className = "card-text";
     let mottoText = document.createTextNode(getCharactersMotto(character));
 
     divBackPersonaje.appendChild(mottoPersonaje);
@@ -86,7 +87,8 @@ function drawCharactersDiv(character, contador) {
 
     divFrontPersonaje.appendChild(imgPersonaje);
 
-    let namePersonaje = document.createElement("p");
+    let namePersonaje = document.createElement("div");
+    namePersonaje.className = "card-title";
     let nameText = document.createTextNode(getCharactersName(character));
 
     divPersonaje.appendChild(divFrontPersonaje);
@@ -94,7 +96,7 @@ function drawCharactersDiv(character, contador) {
     divFrontPersonaje.appendChild(namePersonaje);
     namePersonaje.appendChild(nameText);
 
-    document.body.querySelector(".wrapper").appendChild(divPersonaje);
+    document.body.querySelector("#cards").appendChild(divPersonaje);
 };
 
 
