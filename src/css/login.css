@@ -89,7 +89,7 @@ footer div {
   opacity: 0.9;
 }
 
-.form-group {
+.form-horizontal .form-group {
   width: 700px;
 }
 
