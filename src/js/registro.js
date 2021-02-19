@@ -24,8 +24,8 @@ var criterinom = /^[a-zA-Z]{1,20}$/;
 var criterillinatges = /^[a-zA-Z]{1,30}$/;
 var critericorreu = /^([a-zA-Z]+)@([a-z]{1,20})\.(.com|.es|.net)$/;
 var critericonfirmcorreu = /^([a-zA-Z]+)@([a-z]{1,20})\.(.com|.es|.net)$/;
-var criteripassword = /^[#\w]{6,10}$/;
-var critericonfirmpassword = /^[#\w]{6,10}$/;
+var criteripassword = /^[#\w-]{6,10}$/;
+var critericonfirmpassword = /^[#\w-]{6,10}$/;
 var criteriusername = /^[u]{1}[0-9]{6}[A-Z]{1}$/;
 var criteritelefono = /^[6,9]{1}[0-9]{2}-[0-9]{6}$/;
  

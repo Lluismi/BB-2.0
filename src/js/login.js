@@ -26,7 +26,7 @@
         alert("login:"+ loginResult );
 
         var password = document.getElementById('password').value;
-        var confirmpassword = /^[#\w]{6,10}$/;
+        var confirmpassword = /^[#\w-]{6,10}$/;
         var passwordresult = confirmpassword.test(password);
         alert("password:"+ passwordresult );
     }
