@@ -92,41 +92,27 @@ footer {
     opacity: 0.9;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
+.row {
 
-    > div {
-        padding: 1em;
-        justify-items: center;
+    img {
+        padding-left: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-title {
         text-align: center;
-
-        > p {
-            font-size: 30px;
-            font-family: 'Space Grotesk';
-            font-size: 1em;
-        }
-
-        > img {
-            object-fit: cover;
-            width: 50%;
-        }
     }
 }
-
 @media screen and (max-width: 600px) {
-    .wrapper {
+    #cards {
         -webkit-perspective: 1000px;
         perspective: 1000px;
         position: relative;
         margin: 10px auto;
         
         div {
-
-            > p {
-                font-size: 15px;
-            }
+            font-size: 15px;
 
             > img {
                 object-fit: cover;
@@ -135,21 +121,21 @@ footer {
         }
     }
 
-    #personaje1, #personaje2, #personaje3, #personaje4,
-    #personaje5, #personaje6, #personaje7, #personaje8 {
+    .col1, .col2, .col3, .col4,
+    .col5, .col6, .col7, .col8 {
         position: relative;
         transition: 0.6s;
         transform-style: preserve-3d;
         transform-origin: 100% 25px;
         margin: 5px;
     }
-    #personaje1:hover, #personaje1.flip, #personaje2:hover, #personaje2.flip,
-    #personaje3:hover, #personaje3.flip, #personaje4:hover, #personaje4.flip,
-    #personaje5:hover, #personaje5.flip, #personaje6:hover, #personaje6.flip,
-    #personaje7:hover, #personaje7.flip, #personaje8:hover, #personaje8.flip {
+    .col1:hover, .col1.flip, .col2:hover, .col2.flip,
+    .col3:hover, .col3.flip, .col4:hover, .col4.flip,
+    .col5:hover, .col5.flip, .col6:hover, .col6.flip,
+    .col7:hover, .col7.flip, .col8:hover, .col8.flip {
         transform: rotateX(180deg);
     }
-    .front, .back {
+    .front, .card-body {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         text-align: center;
@@ -164,7 +150,7 @@ footer {
         align-items: center;
         justify-content: center;
     }
-    .back {
+    .card-body {
         transform: rotateX(180deg);
         background: repeating-linear-gradient(
             -45deg,
@@ -183,7 +169,7 @@ footer {
         grid-template-columns: 3fr 3fr 2fr;
     }
 
-    .wrapper {
+    #cards {
         grid-template-columns: repeat(4, 1fr);
     }
     
@@ -196,7 +182,7 @@ footer {
         grid-template-columns: 3fr 3fr 2fr;
     }
 
-    .wrapper {
+    #cards {
         grid-template-columns: repeat(4, 1fr);
     }
     
