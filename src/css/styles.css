@@ -97,6 +97,9 @@ footer div {
 .row .card-title {
   text-align: center;
 }
+.row .card-body {
+  text-align: justify;
+}
 
 @media screen and (max-width: 600px) {
   #cards {

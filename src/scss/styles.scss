@@ -103,6 +103,10 @@ footer {
     .card-title {
         text-align: center;
     }
+
+    .card-body {
+        text-align: justify;
+    }
 }
 @media screen and (max-width: 600px) {
     #cards {
