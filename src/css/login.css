@@ -90,7 +90,10 @@ footer div {
 }
 
 .form-horizontal .form-group {
+  margin: 0 auto;
+  margin-top: 20px;
   width: 700px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=login.css.map */
