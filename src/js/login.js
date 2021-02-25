@@ -19,7 +19,7 @@
     $("footer").load("footer.html");
     });
 
-    function validar(){
+    function login(){
         var username = document.getElementById('username').value;
         var confirmusername = /^[u]{1}[0-9]{6}[A-Z]{1}$/;
         var loginResult = confirmusername.test(username);

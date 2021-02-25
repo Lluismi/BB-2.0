@@ -33,7 +33,7 @@ var criteritelefono = /^[6,9]{1}[0-9]{2}-[0-9]{6}$/;
   Función que llama a las funciones una a una 
   y crea un registro para enseñarlo por la consola.
 */
-function validar(){
+function registro(){
 
     nom();
     llinatges();
