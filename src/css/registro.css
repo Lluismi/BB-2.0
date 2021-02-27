@@ -94,5 +94,8 @@ footer div {
   width: 700px;
   text-align: center;
 }
+.form-horizontal .form-group .col-lg-0 {
+  margin-top: 4px;
+}
 
 /*# sourceMappingURL=registro.css.map */
