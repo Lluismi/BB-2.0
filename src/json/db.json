@@ -1,0 +1,28 @@
+{
+  "construcciones": [
+    {
+      "nom": "casa",
+      "cost": "10",
+      "alquiler": "5",
+      "id": 1
+    },
+    {
+      "nom": "chalet",
+      "cost": "100",
+      "alquiler": "50",
+      "id": 2
+    },
+    {
+      "nom": "hotel",
+      "cost": "500",
+      "alquiler": "250",
+      "id": 3
+    },
+    {
+      "nom": "xibiu",
+      "cost": "50",
+      "alquiler": "25",
+      "id": 4
+    }
+  ]
+}
