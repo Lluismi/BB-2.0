@@ -19,3 +19,32 @@
     $("footer").load("footer.html");
     });
 
+function crearconstruccio(){
+    var nom=document.getElementById("nom").value;
+    var preu=document.getElementById("preu").value;
+    var alquiler=document.getElementById("alquiler").value;
+
+      if((nom=="") || (preu=="") || (alquiler=="")){
+        alert("Completa tots els camps");
+      }else{
+          alert("Construcció creada");
+          novaconstruccio(nom,preu,alquiler);
+          window.location.href = "admin.html";
+      }
+  }
+
+  function novaconstruccio(name,preu,alquiler) {
+    fetch('http://localhost:3000/construcciones', {
+        method: 'POST',
+        body: JSON.stringify({
+          nom: name,
+          preu: preu,
+          alquiler: alquiler
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      })
+      .then(response => response.json())
+}
+
