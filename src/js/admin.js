@@ -91,7 +91,7 @@ function crearconstruccio(){
 }
 
 function esborrarconstruccio(){
-    fetch('http://localhost:3000/construcciones/'+esesborrar, {
+    fetch('http://localhost:3000/construcciones/'+ esesborrar, {
         method: 'DELETE'
       }).then(response => { 
         response.json() 
@@ -113,7 +113,7 @@ function modificarconstruccio() {
 }
 
 function contrucciomodificada(nounom,noupreu,noualquiler) {
-fetch('http://localhost:3000/construcciones/'+modificarconstrucciones, {
+fetch('http://localhost:3000/construcciones/'+ modificarconstrucciones, {
     method: 'PUT',
     body: JSON.stringify({
     nom: nounom,
