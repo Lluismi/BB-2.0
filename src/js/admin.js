@@ -19,6 +19,9 @@
     $("footer").load("footer.html");
     });
 
+var esesborrar;
+
+
 function crearconstruccio(){
     var nom=document.getElementById("nom").value;
     var preu=document.getElementById("preu").value;
@@ -47,4 +50,12 @@ function crearconstruccio(){
       })
       .then(response => response.json())
 }
+
+function esborrarconstruccio(){
+    fetch('http://localhost:3000/construcciones/'+esesborrar, {
+        method: 'DELETE'
+      }).then(response => { 
+        response.json() 
+     })
+  }
 
