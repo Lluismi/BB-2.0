@@ -40,14 +40,6 @@
         }
     }
 
-    window.onload = function () {
-        document.getElementById("login").addEventListener("click", (e) => {
-          e.preventDefault();
-
-          window.location.href = "admin.html";
-        });
-      };
-
       function validacio()
       {
         var usuari_admin = "admin";
@@ -55,6 +47,6 @@
         var usuari = document.getElementById('username').value;
         var contrasenya = document.getElementById('password').value;
         if ((usuari === usuari_admin) && (contrasenya === contrasenya_admin)) {
-          window.open("admin.html", "_self");
+          window.open("admin.html");
         }
       }
