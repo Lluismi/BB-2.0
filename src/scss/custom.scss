@@ -2,8 +2,8 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-$primary: rgb(197, 7, 255);
-$secondary: rgb(0, 255, 200);
-$danger: rgb(200, 255, 0);
+$primary: rgba(31, 31, 31, 0.62);
+$secondary: rgb(194, 143, 44);
+$danger: #62c0EE;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
