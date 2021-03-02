@@ -20,6 +20,7 @@
     });
 
 var esesborrar;
+var modificarconstrucciones;
 
 
 function crearconstruccio(){
@@ -59,3 +60,30 @@ function esborrarconstruccio(){
      })
   }
 
+function modificarconstruccio() {
+var nounom=document.getElementById("newnom").value;
+var noupreu=document.getElementById("newpreu").value;
+var noualquiler=document.getElementById("newalquiler").value;
+if((nounom=="")(noupreu=="")(noualquiler=="")){
+    alert("Completa tots els camps");
+}else{
+    alert("Construcció modificada");
+    contrucciomodificada(nounom,noupreu,noualquiler);
+
+}
+}
+function contrucciomodificada(nounom,noupreu,noualquiler) {
+fetch('http://localhost:3000/construcciones/'+modificarconstrucciones, {
+    method: 'PUT',
+    body: JSON.stringify({
+    nom: nounom,
+    preu:noupreu,
+    alquiler:noualquiler
+    }),
+    headers: {
+    "Content-type": "application/json; charset=UTF-8"
+    }
+})
+.then(response => response.json())
+window.location.href = "admin.html";
+}
