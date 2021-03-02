@@ -50,3 +50,7 @@
           window.open("admin.html");
         }
       }
+
+$('#myModal').on('shown.bs.modal', function () {
+$('#myInput').trigger('focus')
+})
