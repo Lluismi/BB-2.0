@@ -34,28 +34,28 @@ function verconstrucciones(){
         console.log(todos);
         todos.map((construcciones,i) => {
             console.log(construcciones);
-          var contenedor= document.createElement("div");
-          var btn= document.createElement("button");
-          btn.innerHTML = "Eliminar";
-          var btn2= document.createElement("button");
-          btn2.innerHTML = "Modificar";
-          btn.onclick = function () {
+          var cajaconstrucciones= document.createElement("div");
+          var eliminarboton= document.createElement("button");
+          eliminarboton.innerHTML = "Eliminar";
+          var modificarboton= document.createElement("button");
+          modificarboton.innerHTML = "Modificar";
+          eliminarboton.onclick = function () {
               const ul = this.parentNode.parentNode;
               ul.removeChild(this.parentNode);
               esesborrar=construcciones.id;
               esborrarconstruccio();
               location.reload();
           };
-          btn2.onclick = function () {
+          modificarboton.onclick = function () {
               modificarconstrucciones=construcciones.id;
               document.getElementById("vercrear").style="display:none";
               document.getElementById("vermodificar").style="display:block";
   
         };
-          contenedor.innerHTML=construcciones.id + " | " + construcciones.nom + " | preu: " + construcciones.preu + " | Alquiler: " + construcciones.alquiler + " </br>";
-          contenedor.appendChild(btn);
-          contenedor.appendChild(btn2);
-          vercrear.appendChild(contenedor);
+          cajaconstrucciones.innerHTML=construcciones.id + " | " + construcciones.nom + " | preu: " + construcciones.preu + " | Alquiler: " + construcciones.alquiler + " </br>";
+          cajaconstrucciones.appendChild(eliminarboton);
+          cajaconstrucciones.appendChild(modificarboton);
+          vercrear.appendChild(cajaconstrucciones);
   
       })
     }
@@ -102,7 +102,7 @@ function modificarconstruccio() {
     var nounom=document.getElementById("newnom").value;
     var noupreu=document.getElementById("newpreu").value;
     var noualquiler=document.getElementById("newalquiler").value;
-    
+
         if((nounom=="")(noupreu=="")(noualquiler=="")){
             alert("Completa tots els camps");
         }else{
