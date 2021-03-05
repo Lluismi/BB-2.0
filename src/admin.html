@@ -32,8 +32,8 @@
           </div>
         </div>
     </div>
-    <form>
-      <div id="vercrear"></div>
+    <div id="vercrear">
+      <div id="ver"></div>
       <div class="form-horizontal" style="margin:0 auto">
         <div class="form-group">
             <label class="col-lg-4 control-label">Nombre</label>
@@ -50,16 +50,16 @@
         <div class="form-group">
             <label class="col-lg-4 control-label">alquiler</label>
             <div class="col-lg-0">
-                <input id="alquiler" type="text" placeholder="Introducir Descripción" name="description">
-        
+                <input id="alquiler" type="text" placeholder="Introducir alquiler" name="alquiler">
             </div>
         </div>
         <div class="form-group">
             <button class="btn btn-secondary" onclick=crearconstruccio()>Crear</button>
         </div>
       </div>
-
-      <div id="vermodificar" style="display:none">
+    </div>
+    
+    <div id="vermodificar" style="display:none">
       <div class="form-horizontal" style="margin:0 auto">
         <div class="form-group">
             <label class="col-lg-4 control-label">Nuevo Nombre</label>
@@ -76,16 +76,14 @@
         <div class="form-group">
             <label class="col-lg-4 control-label">Nuevo alquiler</label>
             <div class="col-lg-0">
-                <input id="newalquiler" type="text" placeholder="Introducir Descripción" name="description">
-        
+                <input id="newalquiler" type="text" placeholder="Introducir alquiler" name="alquiler">
             </div>
         </div>
         <div class="form-group">
             <button class="btn btn-light" onclick=modificarconstruccio()>modificar</button>
         </div>
-        </div>
       </div>
-    </form>
+    </div>
     <footer></footer>
   </body>
 </html>
