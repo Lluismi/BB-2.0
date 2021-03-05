@@ -19,49 +19,49 @@
     $("footer").load("footer.html");
     });
 
-var esesborrar;
-var modificarconstrucciones;
+    var esesborrar;
+    var modificarconstrucciones;
 
-window.onload = function (){
-    verconstrucciones();
-};
+    window.onload = function (){
+        verconstrucciones();
+    };
 
-function verconstrucciones(){
-    fetch('http://localhost:3000/construcciones')
-    .then(response => response.json())
-    .then(json => pintartodos(json))
-    function pintartodos(todos){
-        console.log(todos);
-        todos.map((construcciones,i) => {
-            console.log(construcciones);
-          var cajaconstrucciones= document.createElement("div");
-          var eliminarboton= document.createElement("button");
-          eliminarboton.innerHTML = "Eliminar";
-          var modificarboton= document.createElement("button");
-          modificarboton.innerHTML = "Modificar";
-          eliminarboton.onclick = function () {
-              const ul = this.parentNode.parentNode;
-              ul.removeChild(this.parentNode);
-              esesborrar=construcciones.id;
-              esborrarconstruccio();
-              location.reload();
-          };
-          modificarboton.onclick = function () {
-              modificarconstrucciones=construcciones.id;
-              document.getElementById("vercrear").style="display:none";
-              document.getElementById("vermodificar").style="display:block";
-  
-        };
-          cajaconstrucciones.innerHTML=construcciones.id + " | " + construcciones.nom + " | preu: " + construcciones.preu + " | Alquiler: " + construcciones.alquiler + " </br>";
-          cajaconstrucciones.appendChild(eliminarboton);
-          cajaconstrucciones.appendChild(modificarboton);
-          vercrear.appendChild(cajaconstrucciones);
-  
-      })
+    function verconstrucciones(){
+        fetch('http://localhost:3000/construcciones')
+        .then(response => response.json())
+        .then(json => pintartodos(json))
+        function pintartodos(todos){
+            console.log(todos);
+            todos.map((construcciones,i) => {
+                console.log(construcciones);
+              var cajaconstrucciones= document.createElement("p");
+              var eliminarboton= document.createElement("button");
+              eliminarboton.innerHTML = "Eliminar";
+              var modificarboton= document.createElement("button");
+              modificarboton.innerHTML = "Modificar";
+              eliminarboton.onclick = function () {
+                  const ul = this.parentNode.parentNode;
+                  ul.removeChild(this.parentNode);
+                  esesborrar=construcciones.id;
+                  esborrarconstruccio();
+                  location.reload();
+              };
+              modificarboton.onclick = function () {
+                  modificarconstrucciones=construcciones.id;
+                  document.getElementById("vercrear").style="display:none";
+                  document.getElementById("vermodificar").style="display:block";
+      
+            };
+              cajaconstrucciones.innerHTML=construcciones.id + " | " + construcciones.nom + " | preu: " + construcciones.preu + " | Alquiler: " + construcciones.alquiler + " </br>";
+              cajaconstrucciones.appendChild(eliminarboton);
+              cajaconstrucciones.appendChild(modificarboton);
+              ver.appendChild(cajaconstrucciones);
+      
+          })
+        }
     }
-}
 
-function crearconstruccio(){
+  function crearconstruccio(){
     var nom=document.getElementById("nom").value;
     var preu=document.getElementById("preu").value;
     var alquiler=document.getElementById("alquiler").value;
@@ -75,11 +75,11 @@ function crearconstruccio(){
       }
   }
 
-  function novaconstruccio(name,preu,alquiler) {
+  function novaconstruccio(nom,preu,alquiler) {
     fetch('http://localhost:3000/construcciones', {
         method: 'POST',
         body: JSON.stringify({
-          nom: name,
+          nom: nom,
           preu: preu,
           alquiler: alquiler
         }),
@@ -88,42 +88,40 @@ function crearconstruccio(){
         }
       })
       .then(response => response.json())
-}
-
-function esborrarconstruccio(){
-    fetch('http://localhost:3000/construcciones/'+ esesborrar, {
-        method: 'DELETE'
-      }).then(response => { 
-        response.json() 
-     })
   }
 
-function modificarconstruccio() {
-    var nounom=document.getElementById("newnom").value;
-    var noupreu=document.getElementById("newpreu").value;
-    var noualquiler=document.getElementById("newalquiler").value;
-
-        if((nounom=="")(noupreu=="")(noualquiler=="")){
-            alert("Completa tots els camps");
-        }else{
-            alert("Construcció modificada");
-            contrucciomodificada(nounom,noupreu,noualquiler);
-
-        }
-}
-
-function contrucciomodificada(nounom,noupreu,noualquiler) {
-fetch('http://localhost:3000/construcciones/'+ modificarconstrucciones, {
-    method: 'PUT',
-    body: JSON.stringify({
-    nom: nounom,
-    preu:noupreu,
-    alquiler:noualquiler
-    }),
-    headers: {
-    "Content-type": "application/json; charset=UTF-8"
+  function esborrarconstruccio(){
+      fetch('http://localhost:3000/construcciones/'+ esesborrar, {
+          method: 'DELETE'
+        }).then(response => { 
+          response.json() 
+      })
     }
-})
-.then(response => response.json())
-window.location.href = "admin.html";
-}
+
+  function modificarconstruccio() {
+    var newnom=document.getElementById("newnom").value;
+    var newpreu=document.getElementById("newpreu").value;
+    var newalquiler=document.getElementById("newalquiler").value;
+    if((newnom=="")||(newpreu=="")||(newalquiler=="")){
+      alert("Completa tots els camps");
+    }else{
+        alert("Construcció modificada");
+        construcciomodificada(newnom,newpreu,newalquiler);
+        
+    }
+  }
+  function construcciomodificada(newnom,newpreu,newalquiler) {
+    fetch('http://localhost:3000/construcciones/'+modificarconstrucciones, {
+      method: 'PUT',
+      body: JSON.stringify({
+        nom: newnom,
+        preu: newpreu,
+        alquiler: newalquiler
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
+    })
+    .then(response => response.json())
+    window.location.href = "admin.html";
+  }
