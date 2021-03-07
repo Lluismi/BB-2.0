@@ -18,7 +18,4 @@ _ _ _
 
 _ _ _
 ### Bugs
-- He tenido un fallo que no me deja tener 2 json abiertos en diferentes puertos.
-- El display none para ver el formulario crear o modificar no funciona correctamente.
-- Al no poder abrir el AUTH con el puerto 3001 (como comento en el primer bug), no he podido comprobar si funciona la parte de los tokens, pero si los usuarios y characters.
-- Al crear el formulario en javascript para ver las construcciones en admin.html, no he sabido añadir bootstrap desde el codigo javascript y me ha quedado un poco cutre.
+- Al crear el formulario en javascript para ver las construcciones en admin.html, no he sabido añadir bootstrap desde el codigo javascript y me ha quedado cutre.
