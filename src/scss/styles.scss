@@ -30,6 +30,10 @@
       }
 }
 
+.navbar-toggler-icon {
+    color: $secondary-color;
+}
+
 .navbar-nav {
     background-color: $black;
     overflow: hidden;
