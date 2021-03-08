@@ -56,7 +56,7 @@ function drawCharacters(characters) {
  */
 function drawCharactersDiv(character, contador) {
     let divPersonaje = document.createElement("div");
-    divPersonaje.className = "col mb-4" + (contador + 1);
+    divPersonaje.className = "col-12 col-md-6 col-lg-4 col-xl-3";
 
     let divFrontPersonaje = document.createElement("div");
     divFrontPersonaje.className = "front";
