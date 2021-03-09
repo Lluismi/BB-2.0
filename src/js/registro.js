@@ -67,7 +67,8 @@ function nom() {
   var nom = document.getElementById('nom').value;
   if (nom.length > 20){
     validado = false;
-    document.getElementById("e_nom").innerHTML = "El nom conté més de 20 caracters"
+    document.getElementById("e_nom").style="display:block!important";
+    document.getElementById("e_nom").innerHTML = "El nom conté més de 20 caracters";
   }
 }
 
@@ -77,6 +78,7 @@ function llinatges() {
   var llinatges = document.getElementById('llinatges').value;
   if (llinatges.length > 30){
     validado = false;
+    document.getElementById("e_llinatges").style="display:block!important";
     document.getElementById("e_llinatges").innerHTML = "El llinatges conté més de 30 caracters"
   }
 }
@@ -88,6 +90,7 @@ function correu() {
   var resultatcorreu = critericorreu.test(correu);
   if (resultatcorreu != true){
     validado = false;
+    document.getElementById("e_correu").style="display:block!important";
     document.getElementById("e_correu").innerHTML = "El correu no compleix amb els criteris deguts: Caràcters en majúscules i minúscules, @ (Només una), màxim 20 caràcters en minúscula, punt (Només un punt), 'com', 'net', o 'és'."
   }
 }
@@ -99,6 +102,7 @@ function confirmcorreu() {
   var confirmcorreu = document.getElementById('confirmcorreu').value;
   if (correu != confirmcorreu || confirmcorreu != correu){
     validado = false;
+    document.getElementById("e_confirmcorreu").style="display:block!important";
     document.getElementById("e_confirmcorreu").innerHTML = "Els correus electrònics no coincideixen."
   }
 }
@@ -110,6 +114,7 @@ function password() {
   var resultatpassword = criteripassword.test(password);
   if (resultatpassword != true) {
     validado = false;
+    document.getElementById("e_password").style="display:block!important";
     document.getElementById("e_password").innerHTML = "La contrasenya no compleixen amb els criteris deguts: Qualsevol caràcter alfanumèric, majúscules, minúscules, guions ('-'). "
   }
 }
@@ -121,6 +126,7 @@ function confirmpassword() {
   var confirmpassword = document.getElementById('confirmpassword').value;
   if (password != confirmpassword || confirmpassword != password) {
     validado = false;
+    document.getElementById("e_confirmpassword").style="display:block!important";
     document.getElementById("e_confirmpassword").innerHTML = "Les contrasenyes no coincideixen."
   }
 }
@@ -132,6 +138,7 @@ function username() {
   var resultatusername = criteriusername.test(username)
   if (resultatusername != true){
     validado = false;
+    document.getElementById("e_username").style="display:block!important";
     document.getElementById("e_username").innerHTML = "El username no cumpleix amb els criteris: u272829N "
   }
 }
@@ -144,6 +151,7 @@ function telefono() {
   var resultatelefono = criteritelefono.test(telefono)
   if (resultatelefono != true){
     validado = false;
+    document.getElementById("e_telefono").style="display:block!important";
     document.getElementById("e_telefono").innerHTML = "El número de telèfon ha de començar per '6' o '9', seguit de 2 numeros qualsevol, un guió ('-') i 6 numeros més."
   }
 }
