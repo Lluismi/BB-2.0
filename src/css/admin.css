@@ -93,21 +93,37 @@ footer div {
   opacity: 0.9;
 }
 
-.form-horizontal .form-group {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 700px;
-  text-align: center;
-}
-.form-horizontal .form-group .col-lg-0 {
-  margin-top: 4px;
+#vercrear {
+  width: 400px;
+  margin: 20px auto;
 }
 
-#vercrear {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 700px;
+@media (max-width: 576px) {
+  #vercrear {
+    width: 200px;
+    margin: 20px auto;
+  }
+}
+#ver {
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  #ver {
+    width: 200px;
+    margin: 20px auto;
+  }
+}
+#vermodificar {
+  width: 400px;
+  margin: 20px auto;
+}
+
+@media (max-width: 576px) {
+  #vermodificar {
+    width: 200px;
+    margin: 20px auto;
+  }
 }
 
 /*# sourceMappingURL=admin.css.map */
