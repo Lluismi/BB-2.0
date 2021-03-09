@@ -1,23 +1,13 @@
-/* Añadir y quitar la clase "responsive" al topnav cuando el usuario hace click
-    en el icono */
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "navbar") {
-          x.className += " responsive";
-      } else {
-          x.className = "navbar";
-      }
-  }
-  
-  /* Carga el contenido html de header.html en su respectiva etiqueta */
-  $(document).ready(() => {
-      $("header").load("header.html");
-    });
-  
-  /* Carga el contenido html de footer.html en su respectiva etiqueta */
-  $(document).ready(() => {
-  $("footer").load("footer.html");
+
+/* Carga el contenido html de header.html en su respectiva etiqueta */
+$(document).ready(() => {
+    $("header").load("header.html");
   });
+
+/* Carga el contenido html de footer.html en su respectiva etiqueta */
+$(document).ready(() => {
+$("footer").load("footer.html");
+});
 
 /* Variables con los criterios de validación */
 var criterinom = /^[a-zA-Z]{1,20}$/;
