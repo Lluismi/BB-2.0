@@ -33,122 +33,102 @@
       </div>
     </div>
     <h2>Crear Cuenta</h2>
-    <form class="form-horizontal" style="margin:0 auto">
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Nom:</label>
-          <div class="col-lg-4">
-            <input id="nom" type="text" class="form-control" placeholder="Escriu es teu nom" required/>
+    <div class="registro">
+      <div class="row">
+        <form class="w-100">
+          <div class="form-group row">
+              <label for="nom" class="col-sm-4 col-form-label">Nom</label>
+              <div class="col-sm-7 px-0">
+                  <input id="nom" name="nom" placeholder="Escriu es teu nom" class="form-control" required="required" type="text">
+              </div>
           </div>
-        </div>
-          <div class="alert alert-danger" role="alert" id="e_nom"></div>
+          <div class="alert alert-danger d-none" role="alert" id="e_nom"></div>
+
+          <div class="form-group row">
+            <label for="llinatges" class="col-sm-4 col-form-label">Llinatges</label>
+            <div class="col-sm-7 px-0">
+                <input id="llinatges" name="llinatges" placeholder="Escriy es teus llinatges" class="form-control" required="required" type="text">
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_llinatges"></div>
+
+          <div class="form-group row">
+            <label for="correu" class="col-sm-4 col-form-label">Correu Electronic</label>
+            <div class="col-sm-7 px-0">
+                <input id="correu" name="correu" placeholder="Escriu es teu correu" class="form-control" required="required" type="text">
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_correu"></div>
+
+          <div class="form-group row">
+            <label for="confirmcorreu" class="col-sm-4 col-form-label">Confirmar correu</label>
+            <div class="col-sm-7 px-0">
+                <input id="confirmcorreu" name="confirmcorreu" placeholder="Escriu es teu correu" class="form-control" required="required" type="text">
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_confirmcorreu"></div>
+
+          <div class="form-group row">
+              <label for="password" class="col-sm-4 col-form-label">Password</label>
+              <div class="col-sm-7 px-0">
+                  <input id="password" name="password" placeholder="Escriu sa teva Password" class="form-control" type="password">
+              </div>
+              <div class="col-sm-1 mt-1">
+                <button type="button" onclick="mostrarContrasena()">👀</button>
+              </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_password"></div>
+
+          <div class="form-group row">
+            <label for="confirmpassword" class="col-sm-4 col-form-label">Confirmar password</label>
+            <div class="col-sm-7 px-0">
+                <input id="confirmpassword" name="confirmpassword" placeholder="Escriu sa teva Password" class="form-control" type="password">
+            </div>
+            <div class="col-sm-1 mt-1">
+              <button type="button" onclick="mostrarContrasena()">👀</button>
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_confirmpassword"></div>
+
+          <div class="form-group row">
+            <label for="username" class="col-sm-4 col-form-label">Username</label>
+            <div class="col-sm-7 px-0">
+                <input id="username" name="username" placeholder="Escriu es teu Username" class="form-control" required="required" type="text">
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_username"></div>
+
+          <div class="form-group row">
+            <label for="telefono" class="col-sm-4 col-form-label">Telefono</label>
+            <div class="col-sm-7 px-0">
+                <input id="telefono" name="telefono" placeholder="Escriu es teu telefono" class="form-control" required="required" type="text">
+            </div>
+          </div>
+          <div class="alert alert-danger d-none" role="alert" id="e_telefono"></div>
+
+          <div class="form-group row">
+            <label for="paisos" class="col-sm-4 col-form-label">Pais</label>
+            <div class="col-sm-7 px-0">
+              <select class="w-100" id="paisos"></select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label">Edad</label>
+            <div class="col-sm-7 px-0 pt-2">
+              <input type="radio" name="drone"/> I’m not 18
+              <input type="radio" name="drone"/> I’m 18
+            </div>
+          </div>
+          
+          <div class="form-group row mb-0">
+            <div class="offset-sm-4">
+              <button button="submit" class="btn btn-danger" onclick="registro()">Registrarse</button>
+            </div>  
+          </div>
+        </form>
       </div>
-    
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Llinatges:</label>
-          <div class="col-lg-4">
-            <input id="llinatges" type="text" class="form-control" placeholder="Escriu es teus llinatges" required/>
-          </div>
-        </div>
-        <div class="alert alert-danger" role="alert" id="e_llinatges"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Correu Electronic:</label>
-          <div class="col-lg-4">
-            <input id="correu" type="text" class="form-control" placeholder="Escriu es teu correu" required/>
-          </div>
-        </div>
-        <div class="alert alert-danger" role="alert" id="e_correu"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Confirmar correu:</label>
-          <div class="col-lg-4">
-            <input id="confirmcorreu" type="text" class="form-control" placeholder="Escriu es teu correu" required/>
-          </div>
-        </div>
-        <div class="alert alert-danger" role="alert" id="e_confirmcorreu"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Password:</label>
-          <div class="col-lg-4">
-            <input id="password" type="password" class="form-control" placeholder="Escriu una contrasenya" required/>
-          </div>
-          <div class="col-lg-0">
-            <button type="button" onclick="mostrarContrasena()">👀</button>
-          </div>
-        </div>
-          <div class="alert alert-danger" role="alert" id="e_password"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Confirmar password:</label>
-          <div class="col-lg-4">
-            <input id="confirmpassword" type="password" class="form-control" placeholder="Escriu una contrasenya"  required />
-          </div>
-          <div class="col-lg-0">
-            <button type="button" onclick="mostrarContrasena()">👀</button>
-          </div>
-        </div>
-        <div class="alert alert-danger" role="alert" id="e_confirmpassword"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Username:</label>
-          <div class="col-lg-4">
-            <input id="username" type="text" class="form-control" placeholder="Escriu es teu username" required />
-          </div>
-        </div>
-          <div class="alert alert-danger" role="alert" id="e_username"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Telefono:</label>
-          <div class="col-lg-4">
-            <input id="telefono" type="text" class="form-control" placeholder="699-999999" required />
-          </div>
-        </div>
-        <div class="alert alert-danger" role="alert" id="e_telefono"></div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Pais:</label>
-          <div class="col-lg-4">
-            <select id="paisos"></select>
-          </div>
-        </div>
-      </div>
-  
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label">Edad:</label>
-          <div class="col-lg-4">
-            <input type="radio" name="drone"/> I’m not 18
-            <input type="radio" name="drone"/> I’m 18
-          </div>
-        </div>
-      </div>
-    
-      <div class="form-group">
-        <div class="row">
-          <label class="col-lg-4 control-label"></label>
-          <div class="col-lg-4">
-            <button type="submit" class="btn btn-danger" onclick="registro()">Registrarse</button>
-          </div>
-        </div>
-      </div>
-    
-    </form>
+    </div>
 
     <footer></footer>
   </body>
