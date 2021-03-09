@@ -31,6 +31,10 @@
   margin-right: auto;
 }
 
+.navbar-toggler-icon {
+  color: white;
+}
+
 .navbar-nav {
   background-color: black;
   overflow: hidden;
