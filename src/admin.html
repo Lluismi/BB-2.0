@@ -34,54 +34,62 @@
     </div>
     <div id="vercrear">
       <div id="ver"></div>
-      <div class="form-horizontal" style="margin:0 auto">
-        <div class="form-group">
-            <label class="col-lg-4 control-label">Nombre</label>
-            <div class="col-lg-0">
-                <input id="nom" type="text" placeholder="Introducir Nombre" name="name">
+      <div class="row">
+        <form class="w-100">
+          <div class="form-group row">
+              <label for="Nombre" class="col-sm-4 col-form-label">Nombre</label>
+              <div class="col-sm-7 px-0">
+                  <input id="nom" name="nom" placeholder="Introducir Nombre" type="text">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="preu" class="col-sm-4 col-form-label">Precio</label>
+              <div class="col-sm-7 px-0">
+                  <input id="preu" name="preu" placeholder="Introducir Precio" type="text">
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="alquiler" class="col-sm-4 col-form-label">Alquiler</label>
+            <div class="col-sm-7 px-0">
+                <input id="alquiler" name="alquiler" placeholder="Introducir alquiler" type="text">
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-4 control-label">Precio</label>
-            <div class="col-lg-0">
-                <input id="preu" type="text" placeholder="Introducir Precio" name="price">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-4 control-label">alquiler</label>
-            <div class="col-lg-0">
-                <input id="alquiler" type="text" placeholder="Introducir alquiler" name="alquiler">
-            </div>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-secondary" onclick=crearconstruccio()>Crear</button>
-        </div>
+          </div>
+          <div class="form-group row mb-0">
+            <div class="offset-sm-4">
+              <button type="button" class="btn btn-secondary" onclick=crearconstruccio()>Crear</button>
+            </div>  
+          </div>
+        </form>
       </div>
     </div>
-    
+
     <div id="vermodificar" style="display:none">
-      <div class="form-horizontal" style="margin:0 auto">
-        <div class="form-group">
-            <label class="col-lg-4 control-label">Nuevo Nombre</label>
-            <div class="col-lg-0">
-                <input id="newnom" type="text" placeholder="Introducir Nombre" name="name">
+      <div class="row">
+        <form class="w-100">
+          <div class="form-group row">
+              <label for="newnom" class="col-sm-4 col-form-label">Nuevo Nombre</label>
+              <div class="col-sm-7 px-0">
+                  <input id="newnom" name="newnom" placeholder="Introducir Nombre" type="text">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label for="newpreu" class="col-sm-4 col-form-label">Nuevo Precio</label>
+              <div class="col-sm-7 px-0">
+                  <input id="newpreu" name="newpreu" placeholder="Introducir Precio" type="text">
+              </div>
+          </div>
+          <div class="form-group row">
+            <label for="newalquiler" class="col-sm-4 col-form-label">Nuevo Alquiler</label>
+            <div class="col-sm-7 px-0">
+                <input id="newalquiler" name="newalquiler" placeholder="Introducir alquiler" type="text">
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-4 control-label">Nuevo Precio</label>
-            <div class="col-lg-0">
-                <input id="newpreu" type="text" placeholder="Introducir Precio" name="price">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-4 control-label">Nuevo alquiler</label>
-            <div class="col-lg-0">
-                <input id="newalquiler" type="text" placeholder="Introducir alquiler" name="alquiler">
-            </div>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-light" onclick=modificarconstruccio()>modificar</button>
-        </div>
+          </div>
+          <div class="form-group row mb-0">
+            <div class="offset-sm-4">
+              <button type="button" class="btn btn-secondary" onclick=modificarconstruccio()>Crear</button>
+            </div>  
+          </div>
+        </form>
       </div>
     </div>
     <footer></footer>
