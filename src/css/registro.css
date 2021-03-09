@@ -93,13 +93,16 @@ footer div {
   opacity: 0.9;
 }
 
-.form-horizontal .form-group {
-  margin: 0 auto;
-  width: 700px;
-  text-align: center;
+.registro {
+  width: 400px;
+  margin: 20px auto;
 }
-.form-horizontal .form-group .col-lg-0 {
-  margin-top: 4px;
+
+@media (max-width: 576px) {
+  .registro {
+    width: 200px;
+    margin: 20px auto;
+  }
 }
 
 /*# sourceMappingURL=registro.css.map */
