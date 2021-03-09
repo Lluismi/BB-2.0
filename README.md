@@ -15,6 +15,16 @@ _ _ _
 _ _ _
 ### Google Fonts
 ![Fuentes de letra utilizadas](/src/images/fuentes.png)
+_ _ _
+### Componentes y utilidades de Bootstrap utilizados:
+- Alerts
+- Badges
+- Buttons
+- Cards
+- Carousel
+- Forms
+- Modals
+- Navbar
 
 _ _ _
 ### Bugs
