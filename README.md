@@ -29,3 +29,4 @@ _ _ _
 _ _ _
 ### Bugs
 - Al crear el formulario en javascript para ver las construcciones en admin.html, no he sabido añadir bootstrap desde el codigo javascript y me ha quedado cutre.
+- A veces al crear, borrar o modificar una construcción no se hace a la primera y hay que hacerlo dos veces.
